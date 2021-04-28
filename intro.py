@@ -20,7 +20,7 @@ def calc(num1,num2):
 
 @app.route('/table/<int:num>')
 def print_table(num):
-    return render_template('table.html',num=num)
+    return render_template('table.html',num=num**num**num)
 
 
 if __name__ == '__main__':
