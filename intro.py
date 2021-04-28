@@ -1,6 +1,5 @@
-import flask
-
-app = flask.Flask(__name__)
+from flask import *
+app = Flask(__name__)
 
 @app.route('/')
 def home():
@@ -18,6 +17,11 @@ def get_post(day):
 @app.route('/calc/<int:num1>/<int:num2>')
 def calc(num1,num2):
     return f'<h1> sum : {num1 + num2} <br> difference : {num1 - num2} <br> product : {num1 * num2} <br> quotient : {num1 / num2}</h1>'
+
+@app.route('/table/<int:num>')
+def print_table(num):
+    return render_template('table.html',num=num)
+
 
 if __name__ == '__main__':
     app.run()
