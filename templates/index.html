@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>
+        Employee Registration
+    </title>
+    <link rel="stylesheet" href={{ url_for( 'static', filename='css/styles.css' ) }}>
+    <link rel="stylesheet" href={{ url_for( 'static', filename='css/table-style.css' ) }}>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div class="add-btn-container">
+                <button class="register-employee-btn" onclick="showEmployeeReg()">New Employee</button>
+                <button class="register-dept-btn" onclick="showDeptReg()">New Department</button>
+            </div>
+            <div class="register-employee-container hidden reg-container" id="registerEmployeeContainer">
+                <form class="register-employee-form">
+                    <h3 class="heading"> ADD NEW EMPLOYEE </h3>
+                    <input type="text" class="top-input" name="emp-name" id="empName" placeholder="EMPLOYEE NAME">
+                    <select name="select-emp-id" class="bottom-input" id="selectEmpId">
+                            <option>101</option>
+                            <option>201</option>
+                            <option>320</option>
+                            <option selected disabled>--SELECT DEPT ID--</option>
+                        </select>
+                    <div class="btns-container">
+                        <button type="submit" id="submitEmp">ADD EMPLOYEE</button>
+                        <button type="reset" id="resetEmp" onclick="hideEmployeeReg()">CANCEL</button>
+                    </div>
+                </form>
+            </div>
+            <div class="register-dept-container hidden reg-container" id="registerDeptContainer">
+                <form class="register-dept-form">
+                    <h3 class="heading"> ADD NEW DEPARTMENT</h3>
+                    <input type="text" class="top-input" name="dept-name" id="deptName" placeholder="DEPARTMENT NAME">
+                    <input type="text" class="bottom-input" name="dept-des" id="deptDes" placeholder="DEPARTMENT DESCRIPTION">
+                    <div class="btns-container">
+                        <button type="submit" id="submitDept">ADD DEPARTMENT</button>
+                        <button type="reset" id="resetDept" onclick="hideDeptReg()">CANCEL</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-container">
+            <table cellspacing="0px" cellpadding="10px" class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>DEPARTMENT ID</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>HARSH W.</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>HARSH AGAIN</td>
+                    <td>201</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>HARSH THE LAST TIME</td>
+                    <td>320</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        var registerEmployeeContainer = document.getElementById("registerEmployeeContainer");
+        var registerDeptContainer = document.getElementById("registerDeptContainer");
+
+        function showEmployeeReg() {
+            registerEmployeeContainer.classList.remove("hidden");
+            hideDeptReg();
+        }
+
+        function showDeptReg() {
+            registerDeptContainer.classList.remove("hidden");
+            hideEmployeeReg();
+        }
+
+        function hideEmployeeReg() {
+            registerEmployeeContainer.classList.add("hidden");
+        }
+
+        function hideDeptReg() {
+            registerDeptContainer.classList.add("hidden");
+        }
+    </script>
+
+</body>
+
+
+</html>

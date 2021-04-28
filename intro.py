@@ -22,6 +22,10 @@ def calc(num1,num2):
 def print_table(num):
     return render_template('table.html',num=num*num)
 
+@app.route('/index')
+def chintan():
+    return render_template('index.html')
+
 
 if __name__ == '__main__':
     app.run()

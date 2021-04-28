@@ -1,0 +1,9 @@
+.table{
+    /* border:1px solid rgba(250, 170, 50, 1); */
+    padding:20px;
+    border-radius:4px;
+    box-shadow: 0 0 6px 0px #ccc;
+}
+tr:hover > td{
+    background-color: rgb(243, 243, 243);
+}

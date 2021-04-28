@@ -1,0 +1,114 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.hidden{
+    display: none;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+.left-container{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.add-btn-container{
+    width: 300px;
+}
+.reg-container{
+    box-shadow: 0 0 6px 0 #ccc;
+    padding: 25px;
+    margin: 30px;
+    border-radius: 5px;
+    width: 400px;
+}
+.heading{
+}
+input{
+    padding: 10px;
+    padding-left: 20px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin-top: -1px;
+    color: #777;
+}
+.top-input{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.bottom-input{
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px;
+    padding-left: 20px;
+    margin-top: -1px;
+    outline: none;
+    border: #ccc 1px solid;
+    color: #777;
+}
+option{
+    
+}
+.btns-container{
+    align-items: stretch;
+    margin-top: 20px;
+}
+button{
+    width: 49%;
+    padding: 10px;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #fff;
+    color: rgb(0,122,204);
+    border: rgb(0,122,204) 1.9px solid; 
+}
+button[type="submit"]{
+    background-color: rgb(0,122,204);
+    color: #fff;
+    border: none;
+}
+button[type="reset"]{
+    background-color: rgb(204,122,0);
+    color: #fff;
+    border: none;
+}
+/* button[type="submit"]{
+    color: rgb(0,122,204);
+    border: 2px solid rgb(0,122,204);
+}
+button[type="reset"]{
+    color: rgb(204,122,0);
+    border: rgb(204,122,0) solid 2px;
+}
+button[type="reset"]:hover{
+    background-color:  rgba(204, 122, 0, 0.3);
+} */
+button:hover,input:hover, select:hover{
+    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.1s;
+}
+input:focus,select:focus,button:active,select:active{
+    box-shadow: inset 0 0 0 9999px rgba(200, 200, 200, 0.2);
+}
+.right-container{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
