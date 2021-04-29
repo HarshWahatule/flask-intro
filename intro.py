@@ -20,11 +20,20 @@ def calc(num1,num2):
 
 @app.route('/table/<int:num>')
 def print_table(num):
-    return render_template('table.html',num=num*num)
+    return render_template('table.html',num=num)
 
 @app.route('/index')
-def chintan():
+def crud_app():
     return render_template('index.html')
+
+@app.route('/login',methods = ['POST'])  
+def login():  
+      uname=request.form['uname']  
+      passwrd=request.form['pass']  
+      if uname=="mude" and passwrd=="maruti":  
+          return "Welcome %s" %uname 
+
+
 
 
 if __name__ == '__main__':
