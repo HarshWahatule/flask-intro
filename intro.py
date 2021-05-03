@@ -26,13 +26,22 @@ def print_table(num):
 def crud_app():
     return render_template('index.html')
 
-@app.route('/login',methods = ['POST'])  
-def login():
-    render_template('login.html')  
-    uname=request.form['uname']  
-    passwrd=request.form['pass']  
-    if uname=="mude" and passwrd=="maruti":  
-        return "Welcome %s" %uname 
+# @app.route('/login')
+@app.route('/login',methods=['POST','GET'])
+def login_page():
+   
+    if request.method == "POST":
+        if request.form['uname']=="mude" and request.form['pass']=="maruti":  
+            return "Welcome %s"%request.form['uname'] 
+        else:
+            return 'invalid creds'
+    else:
+        return render_template('form.html')
+    
+
+
+
+    
 
 
 
